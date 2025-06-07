@@ -352,4 +352,8 @@ body.dark-mode .section p {
         margin-bottom: 5px;
 
     }
+
+    .modal{
+        position: relative;
+    }
 }
