@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Navbar with Smooth Sections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MySite</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="#service1">Service 1</a>
+                    <a href="#service2">Service 2</a>
+                    <a href="#service3">Service 3</a>
+                </div>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="nav-buttons">
+                <button id="login-btn" class="login-btn">Login</button>
+                <button id="dark-mode-toggle" class="dark-mode-btn">🌙</button>
+            </div>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+     
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">×</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sections -->
+    <section id="home" class="section">
+        <h1>Welcome to Home</h1>
+        <p>Explore our beautiful website with smooth animations.</p>
+    </section>
+    <section id="service1" class="section">
+        <h1>Service 1</h1>
+        <p>Discover our first amazing service.</p>
+    </section>
+    <section id="service2" class="section">
+        <h1>Service 2</h1>
+        <p>Learn more about our second service.</p>
+    </section>
+    <section id="service3" class="section">
+        <h1>Service 3</h1>
+        <p>Check out our third service offering.</p>
+    </section>
+    <section id="about" class="section">
+        <h1>About Us</h1>
+        <p>Know more about our mission and vision.</p>
+    </section>
+    <section id="contact" class="section">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us today!</p>
+    </section>
+    <section id="section7" class="section">
+        <h1>Section 7</h1>
+        <p>Additional content for section 7.</p>
+    </section>
+    <section id="section8" class="section footer">
+        <h1>footer</h1>
+        <p>Final section with more information.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
