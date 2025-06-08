@@ -105,7 +105,7 @@ body.dark-mode .section p {
     z-index: 1;
     border-radius: 8px;
     top: 150%;
-    left: -18px;
+    left: -5px;
     transition: all 0.3s ease;
 }
 
@@ -341,7 +341,7 @@ body.dark-mode .section p {
         background: none;
         box-shadow: none;
         position: relative;
-        left: -18px;
+        left: -5px;
         top: 10px;
     } 
     
