@@ -28,7 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Animate Sections on Scroll
-const sections = document.querySelectorAll(".section");
+const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(
   (entries) => {
