@@ -6,9 +6,8 @@
     --dark-background: #121212;
     --dark-text: #e0e0e0;
 }
-.dark-mode{
-    
-}
+
+.dark-mode {}
 
 * {
     margin: 0;
@@ -308,7 +307,7 @@ section p {
     position: relative;
     overflow: hidden;
     padding: min(2rem, 20%) 2rem;
-    
+
 }
 
 .hero-content {
@@ -423,9 +422,30 @@ section p {
     margin-top: 1.5rem;
     font-size: 1.15rem;
     color: #e0e0e0;
+    overflow: hidden;
+    position: relative;
+    height: 2em;
+    background: none;
     animation: fadeInUp 2.2s 1s ease-out forwards;
     opacity: 0;
     transform: translateY(40px);
+}
+
+.hero-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Responsive Design */
