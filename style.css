@@ -572,7 +572,7 @@ footer {
 .footer-col h2::after {
     content: '';
     display: block;
-    width: 0;
+    width: 50%;
     height: 3px;
     background: linear-gradient(90deg, #2575fc, #ff6b6b);
     transition: width 0.4s cubic-bezier(.68, -0.55, .27, 1.55);
@@ -602,19 +602,16 @@ footer {
 .footer-col ul li a::after {
     content: '';
     display: block;
-    width: 0;
-    height: 2px;
-    background: #ff6b6b;
+    width: 0%;
+    height: 3px;
     transition: width 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
     margin-top: 2px;
+    background: linear-gradient(90deg, #2575fc, #ff6b6b);
 }
 
-.footer-col ul li a:hover {
-    color: #ff6b6b;
-}
 
 .footer-col ul li a:hover::after {
-    width: 100%;
+    width: 35%;
 }
 
 .footer-col p {
@@ -796,14 +793,81 @@ footer {
     }
 }
 
+/* Payment Section */
 .payment-methods {
     text-align: center;
     padding: 3rem 1rem 2rem 1rem;
     background: rgba(255, 255, 255, 0.07);
     border-radius: 24px;
     margin: 2rem auto;
-    max-width: 900px;
+    max-width: 100%;
+    width: 98%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+}
+
+.payment-methods h1 {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2575fc;
+    position: relative;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #2575fc, #ff6b6b, #f7b42c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInPaymentTitle 1.2s cubic-bezier(.68, -0.55, .27, 1.55) both;
+}
+
+.payment-methods h1::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, #2575fc, #ff6b6b, #f7b42c);
+    border-radius: 2px;
+    margin: 0.5rem auto 0 auto;
+    transition: width 0.5s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+.payment-methods h1:hover::after,
+.payment-methods h1:focus::after {
+    width: 100%;
+}
+
+@keyframes fadeInPaymentTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.payment-methods p {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInPaymentDesc 1s 0.3s both;
+    opacity: 0;
+}
+
+@keyframes fadeInPaymentDesc {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .payment-options {
@@ -868,6 +932,18 @@ footer {
     animation-delay: 1.5s;
 }
 
+.payment-option:nth-child(7) {
+    animation-delay: 1.7s;
+}
+
+.payment-option:nth-child(8) {
+    animation-delay: 1.9s;
+}
+
+.payment-option:nth-child(9) {
+    animation-delay: 2.1s;
+}
+
 @keyframes paymentPop {
     0% {
         opacity: 0;
@@ -885,11 +961,13 @@ footer {
     }
 }
 
-.payment-option i {
+.payment-option i,
+.payment-option img {
     font-size: 2.2rem;
     color: #2575fc;
     margin-bottom: 0.5rem;
-    transition: color 0.3s;
+    transition: color 0.3s, filter 0.3s;
+    display: block;
 }
 
 .payment-option span {
@@ -908,6 +986,10 @@ footer {
 .payment-option:hover i,
 .payment-option:hover span {
     color: #fff;
+}
+
+.payment-option:hover img {
+    filter: brightness(0) invert(1);
 }
 
 @media (max-width: 700px) {
