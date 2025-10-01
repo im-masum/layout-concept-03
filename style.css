@@ -1,4 +1,4 @@
- :root {
+/* :root {
     --primary-color: #2575fc;
     --secondary-color: #ff6b6b;
     --background-color: #f0f0f0;
@@ -7,8 +7,14 @@
     --dark-text: #e0e0e0;
     --navbar-bg: rgba(255, 255, 255, 0.1);
     --dropdown-bg: rgba(24, 12, 60, 0.954);
-}
+} */
 
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #092847, #131b23, #09121a);
+    color: #e0e0e0;
+}
 
 * {
     margin: 0;
@@ -26,27 +32,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #3d7792, #4ecdc4, #45b7d1);
-    min-height: 100vh;
     max-width: 100%;
     width: 100%;
     color: #101010;
     margin: auto;
+    background: linear-gradient(135deg, #3d7792, #4ecdc4, #45b7d1);
+    padding: min(1rem, 8%) 1rem;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    background: linear-gradient(135deg, #092847, #131b23, #09121a);
-    color: #e0e0e0;
-}
-/* 
+
 body.dark-mode .navbar {
     background: rgba(25, 29, 41, 0.3);
 }
 
 body.dark-mode .dropdown-content {
     background: rgba(24, 12, 60, 0.954);
-} */
+} 
 
 body.dark-mode .section h1,
 body.dark-mode .section p {
@@ -55,16 +56,16 @@ body.dark-mode .section p {
 
 /* navbar */
 .navbar {
-    position: sticky;
-    top: 0;
-    max-width: 100%;
-    width: 100%;
     display: flex;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
-    padding: min(1rem, 8%) .5rem;
-    background: rgba(255, 255, 255, 0.1);
+    max-width: 100%;
+    width: 100%;
+    top: 0;
+    padding: min(0.5rem, 8%) 0.5 rem;
     backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
