@@ -1,13 +1,14 @@
-/* :root {
+ :root {
     --primary-color: #2575fc;
     --secondary-color: #ff6b6b;
     --background-color: #f0f0f0;
     --text-color: #101010;
     --dark-background: #121212;
     --dark-text: #e0e0e0;
+    --navbar-bg: rgba(255, 255, 255, 0.1);
+    --dropdown-bg: rgba(24, 12, 60, 0.954);
 }
 
-.dark-mode {} */
 
 * {
     margin: 0;
@@ -18,7 +19,6 @@
     list-style: none;
     scroll-behavior: smooth;
     transition: all 0.3s ease;
-
 }
 
 body {
@@ -31,7 +31,7 @@ body {
     max-width: 100%;
     width: 100%;
     color: #101010;
-    margin: 10px;
+    margin: auto;
 }
 
 /* Dark Mode */
@@ -39,14 +39,14 @@ body.dark-mode {
     background: linear-gradient(135deg, #092847, #131b23, #09121a);
     color: #e0e0e0;
 }
-
+/* 
 body.dark-mode .navbar {
     background: rgba(25, 29, 41, 0.3);
 }
 
 body.dark-mode .dropdown-content {
     background: rgba(24, 12, 60, 0.954);
-}
+} */
 
 body.dark-mode .section h1,
 body.dark-mode .section p {
