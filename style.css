@@ -558,7 +558,7 @@ section p {
     }
 }
 
-/* ======= Improved Payment Options ======= */
+/* ======= Updated Payment Options (More Professional & Attractive) ======= */
 .payment-options {
     display: flex;
     flex-wrap: wrap;
@@ -570,16 +570,16 @@ section p {
 }
 
 .payment-option {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    box-shadow: 0 6px 32px rgba(37, 117, 252, 0.13), 0 1.5px 8px rgba(0, 0, 0, 0.08);
-    padding: 1.7rem 2.4rem;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(37, 117, 252, 0.13), 0 2px 12px rgba(0, 0, 0, 0.10);
+    padding: 2rem 2.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 130px;
-    min-height: 130px;
+    min-width: 140px;
+    min-height: 140px;
     transition:
         transform 0.35s cubic-bezier(.68, -0.55, .27, 1.55),
         box-shadow 0.3s,
@@ -601,9 +601,9 @@ section p {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle at 60% 40%, rgba(37, 117, 252, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+    width: 130%;
+    height: 130%;
+    background: radial-gradient(circle at 60% 40%, rgba(37, 117, 252, 0.10) 0%, rgba(255, 255, 255, 0.01) 100%);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0.7);
     z-index: 0;
@@ -619,17 +619,17 @@ section p {
 
 .payment-option i,
 .payment-option img {
-    font-size: 2.5rem;
-    margin-bottom: 0.7rem;
+    font-size: 2.7rem;
+    margin-bottom: 0.8rem;
     transition: color 0.3s, filter 0.3s, transform 0.3s;
     display: block;
     color: inherit;
     z-index: 2;
-    filter: drop-shadow(0 2px 8px rgba(37, 117, 252, 0.08));
+    filter: drop-shadow(0 2px 8px rgba(37, 117, 252, 0.10));
 }
 
 .payment-option span {
-    font-size: 1.13rem;
+    font-size: 1.18rem;
     color: #101010;
     font-weight: 700;
     z-index: 2;
@@ -726,8 +726,8 @@ section p {
 /* Hover Effects */
 .payment-option:hover {
     color: #fff;
-    transform: scale(1.12) translateY(-10px) rotate(-2deg);
-    box-shadow: 0 16px 48px 0 rgba(37, 117, 252, 0.18), 0 0 0 6px rgba(255, 255, 255, 0.25);
+    transform: scale(1.14) translateY(-12px) rotate(-2deg);
+    box-shadow: 0 20px 56px 0 rgba(37, 117, 252, 0.20), 0 0 0 8px rgba(255, 255, 255, 0.25);
     background: linear-gradient(120deg, #2575fc, #ff6b6b, #f7b42c);
     border-color: #fff;
     z-index: 2;
@@ -736,12 +736,12 @@ section p {
 .payment-option:hover i,
 .payment-option:hover span {
     color: #fff;
-    transform: scale(1.18);
+    transform: scale(1.22);
 }
 
 .payment-option:hover img {
-    filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.15));
-    transform: scale(1.18);
+    filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.18));
+    transform: scale(1.22);
 }
 
 /* Icon bounce on hover */
@@ -764,7 +764,7 @@ section p {
     }
 
     100% {
-        transform: scale(1.18) translateY(0);
+        transform: scale(1.22) translateY(0);
     }
 }
 
@@ -984,7 +984,6 @@ footer {
     color: #2575fc;
     width: 140px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-    transition: box-shadow 0.3s;
 }
 
 .newsletter-form input[type="email"]:focus {
