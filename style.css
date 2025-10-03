@@ -1,358 +1,5 @@
-/* Add :root for color variables and update for dark mode support */
 
-:root {
-    --primary-color: #2575fc;
-    --secondary-color: #ff6b6b;
-    --accent-color: #f7b42c;
-    --background-color: #f0f0f0;
-    --text-color: #101010;
-    --navbar-bg: rgba(255, 255, 255, 0.1);
-    --section-bg: rgba(255, 255, 255, 0.07);
-    --card-bg: #fff;
-    --card-bg-glass: rgba(255, 255, 255, 0.92);
-    --card-shadow: 0 8px 32px rgba(37, 117, 252, 0.13), 0 2px 12px rgba(0, 0, 0, 0.10);
-    --footer-bg: #101010;
-    --footer-text: #e0e0e0;
-    --input-bg: #fff;
-    --input-text: #2575fc;
-}
-
-body.dark-mode {
-    --primary-color: #6cb2fa;
-    --secondary-color: #ff6b6b;
-    --accent-color: #f7b42c;
-    --background-color: #181c24;
-    --text-color: #e0e0e0;
-    --navbar-bg: rgba(25, 29, 41, 0.3);
-    --section-bg: rgba(24, 12, 60, 0.12);
-    --card-bg: #232a36;
-    --card-bg-glass: rgba(35, 42, 54, 0.92);
-    --card-shadow: 0 8px 32px rgba(37, 117, 252, 0.10), 0 2px 12px rgba(0, 0, 0, 0.18);
-    --footer-bg: #181c24;
-    --footer-text: #e0e0e0;
-    --input-bg: #232a36;
-    --input-text: #6cb2fa;
-    background: linear-gradient(135deg, #092847, #131b23, #09121a);
-    color: var(--text-color);
-}
-
-
-body {
-    color: var(--text-color);
-    background: linear-gradient(135deg, #3d7792, #4ecdc4, #45b7d1);
-    background-color: var(--background-color);
-}
-
-.navbar {
-    background: var(--navbar-bg);
-}
-
-.logo,
-.nav-links a,
-.nav-links a:hover,
-.dropdown-content a,
-.dropdown-content a:hover {
-    color: #fff;
-}
-
-.dropdown-content {
-    background: var(--navbar-bg);
-}
-
-.dark-mode-btn, .login-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-}
-
-.dark-mode .dark-mode-btn, .dark-mode .login-btn {
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--primary-color);
-}
-
-section {
-    background: var(--section-bg);
-}
-
-.hero {
-    background: linear-gradient(120deg, #18bdde 0%, #530c65 50%, var(--primary-color) 100%);
-}
-
-.hero-content {
-    color: #fff;
-}
-
-.hero-title {
-    background: linear-gradient(90deg, #75d4fd, #604102, var(--primary-color));
-    color: #fff;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-btn {
-    background: #fff;
-    color: var(--primary-color);
-}
-
-.hero-btn:hover {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-.hero-content .feature,
-.hero-content .feature:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-}
-
-.hero-content .feature:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-.hero-extra {
-    color: #e0e0e0;
-}
-
-#backToTop {
-    background: #4b430d;
-    color: #fff;
-}
-
-#backToTop:hover {
-    background: var(--secondary-color);
-}
-
-.payment-methods {
-    background: var(--section-bg);
-    box-shadow: var(--card-shadow);
-}
-
-.payment-methods h1 {
-    color: var(--primary-color);
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.payment-methods h1::after {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-}
-
-.payment-methods p {
-    color: #444;
-}
-
-.payment-options {
-    /* no color changes needed */
-}
-
-.payment-methods .payment-option {
-    background: var(--card-bg-glass);
-    box-shadow: var(--card-shadow);
-    border-radius: 22px;
-    border: 2.5px solid transparent;
-}
-
-.payment-option span {
-    color: var(--text-color);
-}
-
-.payment-option[data-tooltip]:hover::after {
-    background: #222;
-    color: #fff;
-}
-
-.payment-option:nth-child(1) {
-    border-color: #1a1f71;
-    background: linear-gradient(135deg, #e3e8fa 60%, #fff 100%);
-}
-
-.payment-option:nth-child(2) {
-    border-color: #eb001b;
-    background: linear-gradient(135deg, #ffe3e3 60%, #fff 100%);
-}
-
-.payment-option:nth-child(3) {
-    border-color: #2e77bb;
-    background: linear-gradient(135deg, #e3f0fa 60%, #fff 100%);
-}
-
-.payment-option:nth-child(4) {
-    border-color: #003087;
-    background: linear-gradient(135deg, #e3f6fa 60%, #fff 100%);
-}
-
-.payment-option:nth-child(5) {
-    border-color: #4caf50;
-    background: linear-gradient(135deg, #e3fae7 60%, #fff 100%);
-}
-
-.payment-option:nth-child(6) {
-    border-color: #ff9800;
-    background: linear-gradient(135deg, #fff5e3 60%, #fff 100%);
-}
-
-.payment-option:nth-child(7) {
-    border-color: #e2136e;
-    background: linear-gradient(135deg, #fae3f0 60%, #fff 100%);
-}
-
-.payment-option:nth-child(8) {
-    border-color: #f7941d;
-    background: linear-gradient(135deg, #faefe3 60%, #fff 100%);
-}
-
-.payment-option:nth-child(9) {
-    border-color: #7b2ff2;
-    background: linear-gradient(135deg, #f3e3fa 60%, #fff 100%);
-}
-
-.payment-option:hover {
-    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-    border-color: #fff;
-}
-
-.payment-option:hover i,
-.payment-option:hover span {
-    color: #fff;
-}
-
-.payment-option:hover img {
-    filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.18));
-}
-
-#contact {
-    background: var(--section-bg);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-}
-
-#contact h1 {
-    color: var(--primary-color);
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.contact-info,
-.contact-form {
-    background: rgba(255, 255, 255, 0.18);
-}
-
-.contact-item {
-    color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.18);
-}
-
-.contact-item:hover {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-.contact-item i {
-    color: var(--secondary-color);
-}
-
-.contact-item:hover i {
-    color: #fff;
-}
-
-.contact-form input,
-.contact-form textarea {
-    background: var(--input-bg);
-    color: var(--input-text);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 2px 12px #2575fc33;
-}
-
-.contact-form button {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-.contact-form button:hover {
-    background: var(--secondary-color);
-}
-
-.footer-content {
-    color: var(--footer-text);
-}
-
-.footer-col h2 {
-    color: var(--primary-color);
-}
-
-.footer-col h2::after {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-}
-
-.footer-col ul li a {
-    color: #fff;
-}
-
-.footer-col ul li a::after {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-}
-
-.footer-col ul li a:hover {
-    color: var(--secondary-color);
-}
-
-.newsletter-form input[type="email"] {
-    background: #fff;
-    color: var(--primary-color);
-}
-
-.newsletter-form input[type="email"]:focus {
-    box-shadow: 0 4px 16px #2575fc44;
-}
-
-.newsletter-form button {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-.newsletter-form button:hover {
-    background: var(--secondary-color);
-}
-
-.footer-social .social-icon {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-.social-icon.facebook {
-    background: #3b5998;
-}
-
-.social-icon.twitter {
-    background: #1da1f2;
-}
-
-.social-icon.instagram {
-    background: #e1306c;
-}
-
-.social-icon.linkedin {
-    background: #0077b5;
-}
-
-.social-icon:hover {
-    background: var(--secondary-color);
-}
-
-.footer-copy {
-    color: #888;
-}
-
-/* Responsive and other existing code remains unchanged */
-
-/* :root {
+ :root {
     --primary-color: #2575fc;
     --secondary-color: #ff6b6b;
     --background-color: #f0f0f0;
@@ -361,7 +8,7 @@ section {
     --dark-text: #e0e0e0;
     --navbar-bg: rgba(255, 255, 255, 0.1);
     --dropdown-bg: rgba(24, 12, 60, 0.954);
-} */
+} 
 
 
 /* Dark Mode */
@@ -917,13 +564,13 @@ section p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 1.5rem;
     max-width: 100%;
     width: 100%;
     animation: fadeInPaymentOptions 1s 0.5s both;
     opacity: 0;
     transform: translateY(30px);
-    align-items: center;
     position: relative;
 }
 
@@ -939,17 +586,19 @@ section p {
     }
 }
 
-.payment-methods .payment-option {
-    /* background: rgba(255, 255, 255, 0.92); */
+.payment-option {
+    background: var(--background-color);
     backdrop-filter: blur(10px);
     border-radius: 22px;
     box-shadow: 0 8px 32px rgba(37, 117, 252, 0.13), 0 2px 12px rgba(0, 0, 0, 0.10);
-    padding: 2rem 2.6rem;
+    padding: min(1rem, 8%) 1.5rem;
     display: block;
     flex-direction: column;
     align-items: center;
-    min-width: 140px;
-    min-height: 140px;
+    justify-content: center;
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
     transition:
         transform 0.35s cubic-bezier(.68, -0.55, .27, 1.55),
         box-shadow 0.3s,
@@ -962,9 +611,11 @@ section p {
     animation: paymentPop 0.7s cubic-bezier(.68, -0.55, .27, 1.55) forwards;
     border: 2.5px solid transparent;
     position: relative;
-    /* overflow: visible; */
-    /* z-index: 1; */
+    overflow: visible;
+    z-index: 1;
 }
+
+
 
 .payment-option::before {
     content: '';
