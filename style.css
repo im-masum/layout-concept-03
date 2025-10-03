@@ -558,25 +558,40 @@ section p {
     }
 }
 
+
 .payment-options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    opacity: 0;
-    animation: paymentFadeIn 1.2s 0.3s cubic-bezier(.68, -0.55, .27, 1.55) forwards;
-    width: 100%;
+    gap: 1.5rem;
     max-width: 100%;
+    width: 100%;
+    animation: fadeInPaymentOptions 1s 0.5s both;
+    opacity: 0;
+    transform: translateY(30px);
+    align-items: center;
+    position: relative;
 }
 
-.payment-option {
+@keyframes fadeInPaymentOptions {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.payment-methods .payment-option{
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(10px);
     border-radius: 22px;
     box-shadow: 0 8px 32px rgba(37, 117, 252, 0.13), 0 2px 12px rgba(0, 0, 0, 0.10);
     padding: 2rem 2.6rem;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     min-width: 140px;
@@ -593,8 +608,8 @@ section p {
     animation: paymentPop 0.7s cubic-bezier(.68, -0.55, .27, 1.55) forwards;
     border: 2.5px solid transparent;
     position: relative;
-    overflow: visible;
-    z-index: 1;
+    /* overflow: visible; */
+    /* z-index: 1; */
 }
 
 .payment-option::before {
@@ -637,6 +652,13 @@ section p {
     letter-spacing: 0.5px;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
     margin-top: 0.2rem;
+}
+
+@keyframes paymentPop {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 .payment-option[data-tooltip]:hover::after {
@@ -785,12 +807,12 @@ section p {
     .payment-options {
         gap: 0.7rem;
     }
-    
+
     .payment-option {
         min-width: 90px;
         padding: 0.7rem 0.7rem;
     }
-    
+
     .payment-option span {
         font-size: 0.95rem;
     }
@@ -1320,5 +1342,5 @@ footer {
         transform: translateY(0);
     }
 }
-/*================= footer Section End ===============*/
 
+/*================= footer Section End ===============*/
