@@ -316,7 +316,7 @@ body.dark-mode .section p {
 section {
     max-width: 100%;
     width: 100%;
-    height: 50dvh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
