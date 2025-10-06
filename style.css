@@ -285,10 +285,9 @@ body.dark-mode .section p {
 @media (max-width: 678px) {
 
     .nav-links {
-        display: block;
         position: fixed;
         top: 100px;
-        right: -100%;
+        left: -100%;
         top: 100px;
         height: auto;
         width: 60%;
@@ -304,7 +303,9 @@ body.dark-mode .section p {
     }
 
     .nav-links.open {
-        right:  100%;
+        left:  100%;
+        right: 0;
+        display: flex;
     }
 
     .nav-links li {
@@ -323,9 +324,7 @@ body.dark-mode .section p {
         margin-left: auto;
     }
 
-    body.nav-open {
-        overflow: hidden;
-    }
+
 }
 
 /* ================== Responsive Sections ================== */
