@@ -319,7 +319,7 @@ body.dark-mode .section p {
 
     .nav-links a {
         width: 100%;
-        font-size: 1rem;
+        font-size: min(.8rem, 4vw);
         padding: 0.5rem 1rem;
         border-radius: 8px;
     }
@@ -555,6 +555,7 @@ section p {
 
     .hero-features {
         display: flex;
+        flex-direction: column;
         gap: 1rem;
         border-radius: 8px;
         padding: min(1rem, 8%) 1rem;
