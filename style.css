@@ -534,7 +534,7 @@ section p {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media  (max-width: 768px) {
     .hero {
         flex-direction: column;
         padding: min(2rem, 20%) 1rem;
@@ -554,10 +554,17 @@ section p {
     }
 
     .hero-features {
-        flex-direction: column;
-        gap: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        border-radius: 8px;
+        padding: min(1rem, 8%) 1rem;
+        width: 100%;
+        margin: 0 auto;
     }
-    
+   .feature, i, span {
+        width: 100%;
+        font-size: min(.5rem, 4vw);
+    } 
 }
 
 /* Back to Top Button */
