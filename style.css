@@ -283,39 +283,44 @@ body.dark-mode .section p {
 }
 
 @media (max-width: 678px) {
+     .navbar {
+        flex-wrap: wrap;
+        padding: min(0.5rem, 8%) 1rem;
+        gap: 10px;
+    }
 
     .nav-links {
         position: fixed;
-        top: 100px;
-        left: -100%;
-        top: 100px;
-        height: auto;
-        width: 60%;
-        background: rgba(255, 255, 255, 0.1);
+        left:-100%;
+        top: 160px;
+        right: 0;
+        width: 90%;
+        background: darkblue;
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 20px;
-        transition: right 0.3s ease;
-        padding: min(2rem, 8%) 1rem;
-        
+        transition: all 0.5s ease;
+        padding: min(1rem, 8%) 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 30px rgba(227, 218, 218, 0.1);
+        margin: 0 auto;
     }
 
-    .nav-links.open {
-        left:  100%;
-        right: 0;
-        display: flex;
+    .nav-links.active {
+        left: 0;
     }
 
     .nav-links li {
         width: 100%;
+        padding: 0.5rem 0;
     }
 
     .nav-links a {
         width: 100%;
-        font-size: 1.1em;
-        padding: 0.9rem 1rem;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
         border-radius: 8px;
     }
 
@@ -348,12 +353,14 @@ body.dark-mode .section p {
 /* Hero Section */
 @media (max-width: 900px) {
     .hero {
-        padding: 1.2rem 0.5rem;
+        padding: min(1.5rem, 15%) 1rem;
         min-height: 60vh;
+
     }
 
     .hero-content {
         padding: 2rem 0.5rem;
+        text-align: center;
     }
 
     .hero-title {
